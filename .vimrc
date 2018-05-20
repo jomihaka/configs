@@ -3,6 +3,8 @@ filetype on
 syntax enable
 
 set laststatus=2
+set lazyredraw
+set nomodeline
 set noswapfile
 set number
 set showmode
@@ -41,18 +43,18 @@ augroup filetype_tabs
   autocmd!
   autocmd FileType ada setlocal softtabstop=3 shiftwidth=3 expandtab
   autocmd FileType c,cpp setlocal softtabstop=4 shiftwidth=4 expandtab
+  autocmd FileType julia setlocal softtabstop=4 shiftwidth=4 expandtab
   autocmd FileType python setlocal softtabstop=4 shiftwidth=4 expandtab
   autocmd FileType html setlocal softtabstop=4 shiftwidth=4 expandtab
   autocmd FileType css setlocal softtabstop=4 shiftwidth=4 expandtab
   autocmd FileType text setlocal softtabstop=4 shiftwidth=4 expandtab
-  autocmd FileType julia setlocal softtabstop=4 shiftwidth=4 expandtab
   autocmd FileType sh setlocal softtabstop=2 shiftwidth=2 expandtab
   autocmd FileType vim setlocal softtabstop=2 shiftwidth=2 expandtab
 augroup END
 
 
 " Airline
-let g:airline#extensions#syntastic#enabled = 1
+" let g:airline#extensions#syntastic#enabled = 1
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
